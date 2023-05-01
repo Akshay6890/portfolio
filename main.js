@@ -51,10 +51,6 @@ var skills_obj={
             logo:'<i class="fab fa-html5"></i>'
         },
         {
-            title:'CSS',
-            logo:'<i class="fab fa-css3"></i>'
-        },
-        {
             title:'JavaScript',
             logo:'<i class="fab fa-js"></i>'
         },
@@ -70,10 +66,6 @@ var skills_obj={
             title:'Java',
             logo:'<i class="fab fa-java"></i>'
         },
-        {
-            title:'PHP',
-            logo:'<i class="fab fa-php"></i>'
-        }
     ],
 };
 
@@ -84,20 +76,4 @@ for(var i=0;i<skills_obj.items.length;i++){
     else{
         skills_div.innerHTML+='<div class="skills-item skills-item-left"><span>'+skills_obj.items[i].logo+'</span><h2>'+skills_obj.items[i].title+'</h2></div>';
     }
-}
-
-window.addEventListener("scroll", function() {
-    var elementTarget = document.getElementById("section-header");
-    console.log('elementTarget.offsetTop,elementTarget.offsetHeight',elementTarget.getBoundingClientRect().top);
-    if (document.body.scrollTop >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-        console.log('hi');
-        elementTarget.classList.add('fixed');
-    }
-    else{
-        elementTarget.classList.remove('fixed');
-    }
-});
-
-function myFunction(){
-    console.log('hello');
 }
