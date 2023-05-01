@@ -22,9 +22,9 @@
 				</div>
 				<div class="section-list">
 					<ul>
-						<li class="active">Projects</li><br>
-						<li>Skills</li><br>
-						<li>Acheivements</li>
+						<li class="active" onclick="document.getElementById('main-child-right').scrollIntoView(true);">Projects</li><br>
+						<li onclick="document.getElementById('skills').scrollIntoView(true);">Skills</li><br>
+						<li onclick="document.getElementById('wins').scrollIntoView(true);">Acheivements</li>
 					</ul>
 				</div>
 				<div class="socials">
@@ -35,7 +35,7 @@
 			<div class="main-child-right" id="main-child-right">
 				<div class="section-header" id="section-header">Projects</div>
 				<div class="projects" id="projects"></div>
-				<div class="skills" id="skills"></div>
+				<div onfocus="myFunction()" class="skills" id="skills"></div>
 				<div class="wins" id="wins"></div>
 			</div>
 		</div>

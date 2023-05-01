@@ -163,7 +163,57 @@
     left: 45vw;
     width: 100%;
     height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
+}
+
+.main .main-child-right .skills .skills-item-right *{
+    background-color: rgb(32 32 34);
+}
+
+.main .main-child-right .skills .skills-item-right span{
+    font-size: 80px;
+}
+
+.main .main-child-right .skills .skills-item-right{
+    height: 300px;
+    width: 49%;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32 32 34);
+}
+
+.main .main-child-right .skills .skills-item-left *{
+    background-color: rgb(32 32 34);
+}
+
+.main .main-child-right .skills .skills-item-left span{
+    font-size: 50px;
+}
+
+.main .main-child-right .skills .skills-item-left{
+    background-color: rgb(32 32 34);
+    height: 300px;
+    width: 49%;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .main .main-child-right .wins{

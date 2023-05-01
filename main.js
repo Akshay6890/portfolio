@@ -40,7 +40,7 @@ for(var i=0;i<projects.items.length;i++){
 }
 
 var skills_div = document.getElementById('skills');
-var skill__logo_map={
+var skills_obj={
     items:[
         {
             title:'Python',
@@ -69,14 +69,27 @@ var skill__logo_map={
         {
             title:'Java',
             logo:'<i class="fab fa-java"></i>'
+        },
+        {
+            title:'PHP',
+            logo:'<i class="fab fa-php"></i>'
         }
     ],
 };
 
+for(var i=0;i<skills_obj.items.length;i++){
+    if(i%2!=0){
+        skills_div.innerHTML+='<div class="skills-item skills-item-right"><span>'+skills_obj.items[i].logo+'</span><h2>'+skills_obj.items[i].title+'</h2></div>';
+    }
+    else{
+        skills_div.innerHTML+='<div class="skills-item skills-item-left"><span>'+skills_obj.items[i].logo+'</span><h2>'+skills_obj.items[i].title+'</h2></div>';
+    }
+}
 
 window.addEventListener("scroll", function() {
     var elementTarget = document.getElementById("section-header");
-    if (window.scrollY >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+    console.log('elementTarget.offsetTop,elementTarget.offsetHeight',elementTarget.getBoundingClientRect().top);
+    if (document.body.scrollTop >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {
         console.log('hi');
         elementTarget.classList.add('fixed');
     }
@@ -84,3 +97,7 @@ window.addEventListener("scroll", function() {
         elementTarget.classList.remove('fixed');
     }
 });
+
+function myFunction(){
+    console.log('hello');
+}
