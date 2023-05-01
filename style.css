@@ -284,7 +284,7 @@
         padding-left: 5vw;
         padding-right: 5vw;
         padding-bottom: 50px;
-        height: 80vh;
+        height: 100vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -313,7 +313,7 @@
         align-items: flex-start;
         justify-content: space-around;
         position: relative;
-        padding-top:80vh;
+        padding-top:100vh;
         padding-left: 5vw;
         padding-right: 5vw;
         padding-bottom: 50px;
@@ -321,6 +321,7 @@
 
     .main .main-child-right .section-header{
         display: block;
+        align-items: center;
     }
 
     .main .main-child-right .projects{
@@ -349,7 +350,7 @@
     .main .main-child-right .skills .skills-item-right{
         height: 220px;
         margin-top: 5px;
-        padding-left: 20px;
+        padding-right: 20px;
         padding-top: 20px;
         margin-left: 0px;
         padding-bottom: 20px;
@@ -392,6 +393,10 @@
         align-self: center;
     }
 
+    .main .main-child-right .skills .skills-item{
+        flex-basis: 50%;
+    }
+    
     .main .main-child-right .skills .skills-item-right span{
         font-size: 60px;
     }
@@ -403,7 +408,7 @@
     .main .main-child-right .skills .skills-item-right{
         height: 180px;
         margin-top: 5px;
-        padding-left: 20px;
+        padding-right: 20px;
         padding-top: 20px;
         margin-left: 0px;
         padding-bottom: 20px;
@@ -481,6 +486,49 @@
 
     .main .main-child-left .intro p{
         align-self: center;
+    }
+
+    .main .main-child-right .skills .skills-item-right span{
+        font-size: 50px;
+    }
+
+    .main .main-child-right .skills .skills-item-left span{
+        font-size: 50px;
+    }
+
+    .main .main-child-right .skills .skills-item-right h2{
+        font-size: 15px;
+    }
+
+    .main .main-child-right .skills .skills-item-left h2{
+        font-size: 15px;
+    }
+
+    .main .main-child-right .skills .skills-item-right{
+        height: 130px;
+        margin-top: 5px;
+        padding-right: 20px;
+        padding-top: 20px;
+        margin-left: 0px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(32 32 34);
+    }
+
+    .main .main-child-right .skills .skills-item-left{
+        background-color: rgb(32 32 34);
+        height: 130px;
+        margin-top: 5px;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
 }
