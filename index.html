@@ -10,60 +10,36 @@
 		<link rel="shortcut icon" href="https://media.licdn.com/dms/image/C5603AQFGXFmNtKbdKA/profile-displayphoto-shrink_400_400/0/1617465487283?e=1687392000&v=beta&t=h7O2aRZA3FDPwWBeEKPyTcTI2HZQOfGkmgYdz2Zjb9k" type="image/x-icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css" integrity="sha512-yU7+yXTc4VUanLSjkZq+buQN3afNA4j2ap/mxvdr440P5aW9np9vIr2JMZ2E5DuYeC9bAoH9CuCR7SJlXAa4pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<body>
-
-		<!--navbar-->
-		<nav>
-			<ul>
-				<li onclick="window.href=document.getElementById('skills').scrollIntoView(true);">Skills</li>
-				<li onclick="window.href=document.getElementById('projects').scrollIntoView(true);">Projects</li>
-				<li>Logo</li>
-				<li>About Me</li>
-				<li>Contact</li>
-			</ul>
-			<span class="logo">
-				<div class="container" onclick="myFunction(this)">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
-				  </div>
-			</span>
-			<span class="logo1">Akshay</span>
-		</nav>
-
-		<!--intro-->
-		<section id="intro">
-			<div class="intro-div">
-				<img class="intro-pic" src="https://media.licdn.com/dms/image/C5603AQFGXFmNtKbdKA/profile-displayphoto-shrink_400_400/0/1617465487283?e=1687392000&v=beta&t=h7O2aRZA3FDPwWBeEKPyTcTI2HZQOfGkmgYdz2Zjb9k" alt="akshay-image"></img>
-				<span>Hi, I'm Akshay Kumar</span>
-				<div class="intro-text">A Software Developer based in Hayward, California.</div>
-			</div>
-		</section>
-
-
-		<!--skills-->
-		<section id="skills">
-			<div class="skills-div">
-				
-			</div>
-		</section>
-
-		<!--projects-->
-		<section id="projects">
-			<div class="projects-div">
-				<div class="projects-div-1">
-					<div></div>
-					<div></div>
+		<div class="main">
+			<div class="main-child-left">
+				<div class="intro">
+					<img src="https://media.licdn.com/dms/image/C5603AQFGXFmNtKbdKA/profile-displayphoto-shrink_400_400/0/1617465487283?e=1687392000&v=beta&t=h7O2aRZA3FDPwWBeEKPyTcTI2HZQOfGkmgYdz2Zjb9k" alt="akshay-image"></img>
+					<h1>Akshay Pendyala</h1><br>
+					<p>Software Developer based in Hayward, California.</p>
 				</div>
-				<div class="projects-div-2">
-					<div></div>
-					<div></div>
+				<div class="section-list">
+					<ul>
+						<li class="active">Projects</li><br>
+						<li>Skills</li><br>
+						<li>Acheivements</li>
+					</ul>
+				</div>
+				<div class="socials">
+					<a href="https://github.com/Akshay6890"><i class="fab fa-github"></i></a>&nbsp;&nbsp;
+					<a href="https://www.linkedin.com/in/pendyala-akshay-kumar-61221a180/"><i class="fab fa-linkedin"></i></a>
 				</div>
 			</div>
-		</section>
-
+			<div class="main-child-right" id="main-child-right">
+				<div class="section-header" id="section-header">Projects</div>
+				<div class="projects" id="projects"></div>
+				<div class="skills" id="skills"></div>
+				<div class="wins" id="wins"></div>
+			</div>
+		</div>
+		
 		<script type="text/javascript" src="/main.js"></script>
 	</body>
 </html>
