@@ -23,17 +23,18 @@ var projects = {
             title:'Sentiment Analysis',
             technologies_used:['Python','HTML','JavaScript'],
             link:'https://github.com/Akshay6890/Sentiment-Analysis',
-            description:'This project is intended to analyze all the reviews collected from users and also we displayed the summarized results in form of a graph.'
+            description:'This project is intended to analyze all the reviews collected from users and display the summarized results in form of a graph.'
         }
     ],
 };
+
 for(var i=0;i<projects.items.length;i++){
     var tech_list="";
     for(var j=0;j<projects.items[i].technologies_used.length;j++){
         tech_list+='&#x2022;&nbsp;'+projects.items[i].technologies_used[j]+'&nbsp;&nbsp;';
     }
     projects_div.innerHTML+='<a class="project-item" target="_blank" href="'+projects.items[i].link+'">'+
-    '<h1 style="font-size:25px">'+projects.items[i].title+'</h1><br>'+
+    '<h1 style="font-size:25px;color:orange">'+projects.items[i].title+'</h1><br>'+
     '<div style="font-size:15px">'+tech_list+'</div><br>'+
     '<p>'+projects.items[i].description+'</p></a>';
 }
