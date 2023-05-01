@@ -74,20 +74,18 @@
 }
 
 .main .main-child-left .section-list ul li{
-    transition: transform .1s;
     color: rgb(148 148 149);
 }
 
 .main .main-child-left .section-list ul li:hover{
     color: rgb(255, 255, 255);
-    transform:scale(1.1);
     cursor: pointer;
 }
 
 .main .main-child-left .section-list ul .active{
     color: rgb(255, 255, 255);
     transition: transform .4s;
-    transform:scale(1.1);
+    transform:scale(1.2);
 }
 
 .main .main-child-left .socials{

@@ -77,3 +77,23 @@ for(var i=0;i<skills_obj.items.length;i++){
         skills_div.innerHTML+='<div class="skills-item skills-item-left"><span>'+skills_obj.items[i].logo+'</span><h2>'+skills_obj.items[i].title+'</h2></div>';
     }
 }
+
+function sectionClick(section_id){
+    var x= document.getElementById(section_id);
+    x.scrollIntoView(true);
+    if(section_id=='main-child-right'){
+        document.getElementById('skills-list').classList.remove('active');
+        document.getElementById('wins-list').classList.remove('active');
+        document.getElementById('projects-list').classList.add('active');
+    }
+    else if(section_id=='skills'){
+        document.getElementById('projects-list').classList.remove('active');
+        document.getElementById('wins-list').classList.remove('active');
+        document.getElementById('skills-list').classList.add('active');
+    }
+    else if(section_id=='wins'){
+        document.getElementById('skills-list').classList.remove('active');
+        document.getElementById('projects-list').classList.remove('active');
+        document.getElementById('wins-list').classList.add('active');
+    }
+}
