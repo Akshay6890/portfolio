@@ -79,13 +79,13 @@
 }
 
 .main .main-child-left .section-list ul li:hover{
-    color: orange;
+    color: rgb(255, 255, 255);
     transform:scale(1.1);
     cursor: pointer;
 }
 
 .main .main-child-left .section-list ul .active{
-    color: orange;
+    color: rgb(255, 255, 255);
     transition: transform .4s;
     transform:scale(1.1);
 }
@@ -135,7 +135,7 @@
 .main .main-child-right .projects .project-item{
     width:100%;
     background-color: rgb(32 32 34);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-top: 30px;
     padding-left: 50px;
     padding-bottom: 30px;
@@ -227,6 +227,13 @@
     }
 
 
+}
+
+@media only screen and (max-width: 800px) {
+    .main .main-child-right .projects .project-item:hover{
+        cursor: pointer;
+        transform:scale(1);
+    }
 }
 
 @media only screen and (max-width: 503px) {

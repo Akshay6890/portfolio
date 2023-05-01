@@ -34,10 +34,45 @@ for(var i=0;i<projects.items.length;i++){
         tech_list+='&#x2022;&nbsp;'+projects.items[i].technologies_used[j]+'&nbsp;&nbsp;';
     }
     projects_div.innerHTML+='<a class="project-item" target="_blank" href="'+projects.items[i].link+'">'+
-    '<h1 style="font-size:25px;color:orange">'+projects.items[i].title+'</h1><br>'+
+    '<h1 style="font-size:25px">'+projects.items[i].title+'</h1><br>'+
     '<div style="font-size:15px">'+tech_list+'</div><br>'+
     '<p>'+projects.items[i].description+'</p></a>';
 }
+
+var skills_div = document.getElementById('skills');
+var skill__logo_map={
+    items:[
+        {
+            title:'Python',
+            logo:'<i class="fab fa-python"></i>'
+        },
+        {
+            title:'HTML',
+            logo:'<i class="fab fa-html5"></i>'
+        },
+        {
+            title:'CSS',
+            logo:'<i class="fab fa-css3"></i>'
+        },
+        {
+            title:'JavaScript',
+            logo:'<i class="fab fa-js"></i>'
+        },
+        {
+            title:'SQL',
+            logo:'<i class="fa fa-database"></i>'
+        },
+        {
+            title:'React',
+            logo:'<i class="fab fa-react"></i>'
+        },
+        {
+            title:'Java',
+            logo:'<i class="fab fa-java"></i>'
+        }
+    ],
+};
+
 
 window.addEventListener("scroll", function() {
     var elementTarget = document.getElementById("section-header");
