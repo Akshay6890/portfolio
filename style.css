@@ -296,6 +296,7 @@
     .main .main-child-left .intro{
         width: 100%;
         display: contents;
+        text-align: center;
     }
 
     .main .main-child-left .socials{
@@ -321,7 +322,8 @@
 
     .main .main-child-right .section-header{
         display: block;
-        align-items: center;
+        text-align: center;
+        font-weight:600;
     }
 
     .main .main-child-right .projects{
@@ -349,7 +351,7 @@
 
     .main .main-child-right .skills .skills-item-right{
         height: 220px;
-        margin-top: 5px;
+        margin-top: 3px;
         padding-right: 20px;
         padding-top: 20px;
         margin-left: 0px;
@@ -364,7 +366,7 @@
     .main .main-child-right .skills .skills-item-left{
         background-color: rgb(32 32 34);
         height: 220px;
-        margin-top: 5px;
+        margin-top: 3px;
         padding-left: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -381,6 +383,12 @@
     .main .main-child-right .projects .project-item:hover{
         cursor: pointer;
         transform:scale(1);
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .main .main-child-right .skills .skills-item{
+        flex-basis: 50%;
     }
 }
 
