@@ -2,6 +2,12 @@ var projects_div = document.getElementById('projects');
 var projects = {
     items:[
         {
+            title:'Workday Credentials Manager',
+            technologies_used:['JavaScript','HTML','CSS','Chrome APIs'],
+            link:'https://github.com/Akshay6890/Workday-Account-Manager',
+            description:'Safely manage and organize credentials for companies utilizing the Workday platform with our Workday Credential Manager Chrome extension.'
+        },
+        {
             title:'Book Recommendation Analysis',
             technologies_used:['Python','JavaScript','HTML','CSS','SQL'],
             link:'https://github.com/Akshay6890/Book-Recommendation-Analysis',
