@@ -1,62 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Akshay Pendyala</title>
-		<meta name="Akshay Pendyala" value="notranslate">
-		<meta name="application-name" content="Akshay Pendyala">
-		<meta name="description" content="Akshay Pendyala's Portfolio">
-		<meta name="application-url" content="/">
-		<link rel="shortcut icon" href="https://media.licdn.com/dms/image/C5603AQFGXFmNtKbdKA/profile-displayphoto-shrink_400_400/0/1617465487283?e=1687392000&v=beta&t=h7O2aRZA3FDPwWBeEKPyTcTI2HZQOfGkmgYdz2Zjb9k" type="image/x-icon">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	</head>
-	<body>
-		<div class="main">
-			<div class="main-child-left">
-				<div class="intro">
-					<img src="IMG_5938.jpg" alt="akshay-image"></img>
-					<h1>Akshay Pendyala</h1><br>
-					<p>Software Developer based in Hayward, California.</p>
-				</div>
-				<div class="section-list">
-					<ul>
-						<li class="active" id="projects-list" onclick="sectionClick('main-child-right')">Projects</li><br>
-						<li id="skills-list" onclick="sectionClick('skills')">Skills</li><br>
-						<li id="wins-list" onclick="sectionClick('wins')">Acheivements</li>
-					</ul>
-				</div>
-				<div class="socials">
-					<a href="https://github.com/Akshay6890"><i class="fab fa-github"></i></a>&nbsp;&nbsp;
-					<a href="https://www.linkedin.com/in/pendyala-akshay-kumar-61221a180/"><i class="fab fa-linkedin"></i></a>
-				</div>
-			</div>
-			<div class="main-child-right" id="main-child-right">
-				<div class="projects" id="projects"><div class="section-header">Projects</div></div>
-				<div class="skills" id="skills"><div class="section-header">Skills</div></div>
-				<div class="wins" id="wins"></div>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="/main.js"></script>
-		<!-- Default Statcounter code for My Portfolio https://akshaypendyala.netlify.app/ -->
-		<script type="text/javascript">
-			var sc_project=13021567; 
-			var sc_invisible=1; 
-			var sc_security="6c7bf08e"; 
-		</script>
-		<script 
-			type="text/javascript"
-			src="https://www.statcounter.com/counter/counter.js"
-			async>
-		</script>
-		<noscript><div class="statcounter"><a title="Web Analytics"
-		href="https://statcounter.com/" target="_blank"><img
-		class="statcounter"
-		src="https://c.statcounter.com/13021567/0/6c7bf08e/1/"
-		alt="Web Analytics"
-		referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-		<!-- End of Statcounter Code -->
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akshay Pendyala - Software Engineer specializing in scalable architectures and cloud solutions">
+    <meta name="keywords" content="Distributed Systems, Software Engineer, Cloud Architect, Go, Python, JavaScript">
+    <meta name="author" content="Akshay Pendyala">
+    <meta property="og:title" content="Akshay Pendyala | Software Engineer">
+    <meta property="og:description" content="Building scalable and resilient distributed systems">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://akshaypendyala.netlify.app/">
+    <title>Akshay Pendyala | Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-left">
+            <a href="#" class="nav-logo">AP</a>
+        </div>
+        <div class="nav-right">
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#about" class="nav-link">About</a>
+        </div>
+        <button class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero section-vh">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Hi, I'm Akshay</span>
+                <span class="title-line-desc">Software Engineer and </span>
+                <span class="title-line-desc">Tech Enthusiast</span>
+            </h1>
+            <div class="hero-links">
+                <a href="#work" class="hero-link">
+                    <span>See my work</span>
+                    <div class="link-arrow">→</div>
+                </a>
+                <a href="Resume.pdf" class="hero-link" download>
+                    <span>Download CV</span>
+                    <div class="link-arrow">↓</div>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-text">Scroll</div>
+            <div class="scroll-line"></div>
+        </div>
+    </main>
+
+    <!-- Work Section -->
+    <section id="work" class="section-vh">
+        <div class="section-header">
+            <h2 class="section-title">Work</h2>
+            <div class="section-subtitle">Selected projects</div>
+        </div>
+
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="work-card-content">
+                    <h3 class="work-card-title">LinkedIn Job Feedback Summarizer</h3>
+                    <p class="work-card-desc">NLP-powered job feedback analyzer that summarizes interview experiences</p>
+                    <div class="work-card-footer">
+                        <div class="work-card-tags">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>AWS EC2</span>
+                            <span>AWS S3</span>
+                        </div>
+                        <div class="work-card-links">
+                            <a href="https://github.com/Akshay6890/LinkedIn-Job-Summarizer" class="work-card-link" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <div class="work-card-content">
+                    <h3 class="work-card-title">Workday Credential Manager</h3>
+                    <p class="work-card-desc">Chrome extension that manages the workday portal credentials and autofills them</p>
+                    <div class="work-card-footer">
+                        <div class="work-card-tags">
+                            <span>Chrome Extension API</span>
+                            <span>JavaScript</span>
+                            <span>Broadcast API</span>
+                        </div>
+                        <div class="work-card-links">
+                            <a href="https://github.com/Akshay6890/Workday-Account-Manager" class="work-card-link" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-card-content">
+                    <h3 class="work-card-title">Book recommender system</h3>
+                    <p class="work-card-desc">An AI Model that uses K-NN mathematical model to recommend books based on certain characteristics</p>
+                    <div class="work-card-footer">
+                        <div class="work-card-tags">
+                            <span>Python</span>
+                            <span>AI</span>
+                            <span>Sqlite3</span>
+                        </div>
+                        <div class="work-card-links">
+                            <a href="https://github.com/Akshay6890/Book-Recommendation-Analysis" class="work-card-link" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-vh bg-light">
+        <div class="section-header">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-subtitle">Professional journey</div>
+        </div>
+
+        <div class="experience-container">
+            <div class="experience-item">
+                <div class="experience-date">2021 - 2023</div>
+                <div class="experience-content">
+                    <h3>Software Engineer</h3>
+                    <h4>Infosys</h4>
+                    <ul>
+                        <li>Led migration of reporting tool from IBM Alphabox to native JS</li>
+                        <li>Developed financial reports handling $1B+ in assets</li>
+                        <li>Implemented security fixes for SQLi, XSS vulnerabilities</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-date">2020 - 2021</div>
+                <div class="experience-content">
+                    <h3>Software Engineer</h3>
+                    <h4>Scytale Alpha Pvt. Ltd.</h4>
+                    <ul>
+                        <li>Improved UX/UI for better engagement</li>
+                        <li>Enhanced website responsiveness with Bootstrap</li>
+                        <li>Automated data collection with Google Sheets API</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-date">2020 - 2020</div>
+                <div class="experience-content">
+                    <h3>Software Engineer Intern</h3>
+                    <h4>Crio.Do</h4>
+                    <ul>
+                        <li>Added functionality for a mobile app to generate tags related to the image of a food</li>
+                        <li>Posts the image to a pinterest storyboard and tags to facebook timeline</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-date">2019 - 2019</div>
+                <div class="experience-content">
+                    <h3>Web Development Intern</h3>
+                    <h4>Infochord Technologies Pvt. Ltd.</h4>
+                    <ul>
+                        <li>Developed a dynamic Learning Management System leveraging PHP, MySQL, and JavaScript to enhance user experience and streamline functionality</li>
+                        <li>Spearheaded daily mini-projects, culminating in a robust, feature-rich application that showcased advanced technical skills and problem-solving abilities</li>
+                        <li>Demonstrated consistent growth, adaptability, and a commitment to excellence throughout the internship journey</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-vh">
+        <div class="section-header">
+            <h2 class="section-title">Skills</h2>
+            <div class="section-subtitle">Technologies I work with</div>
+        </div>
+
+        <div class="skills-grid">
+            <i class="fab fa-js skill-icon" title="JavaScript"></i>
+            <i class="fab fa-python skill-icon" title="Python"></i>
+            <i class="fab fa-java skill-icon" title="Java"></i>
+            <i class="fab fa-jenkins skill-icon" title="Jenkins"></i>
+            <i class="fab fa-linux skill-icon" title="Linux"></i>
+            <i class="fab fa-golang skill-icon" title="Go"></i>
+            <i class="fab fa-react skill-icon" title="React"></i>
+            <i class="fab fa-node skill-icon" title="Node.js"></i>
+            <i class="fab fa-aws skill-icon" title="AWS"></i>
+            <i class="fab fa-docker skill-icon" title="Docker"></i>
+            <i class="fas fa-database skill-icon" title="MongoDB"></i>
+            <i class="fas fa-code-branch skill-icon" title="Git"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-vh bg-light">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="about-title">About Me</h2>
+                <div class="about-text">
+                    <p>I'm a software engineer passionate about building scalable and resilient architectures. My journey in tech began with a curiosity about how complex systems handle massive scale.</p>
+                    <p>When I'm not architecting systems, you'll find me:</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-code"></i> Exploring new technologies</li>
+                        <li><i class="fas fa-earth"></i> Watching documentaries and reading about space</li>
+                        <li><i class="fas fa-plane"></i> Planning my next adventure</li>
+                    </ul>
+                </div>
+                <div class="about-links">
+                    <a href="mailto:pendyala.akshay1999@gmail.com" class="about-link">
+                        <span>Get in touch</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="me.jpg" alt="Akshay Pendyala" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-logo">AP</div>
+                <p class="footer-quote">"Simplicity is the ultimate sophistication"</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Akshay6890" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/akshay-kumar-pendyala-61221a180/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/pendyala_akshay" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:pendyala.akshay1999@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-location">
+                    <i class="fas fa-map-marker-alt"></i> Hayward, CA
+                </div>
+                <div class="footer-copyright">© <span id="year"></span> Akshay Pendyala. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
