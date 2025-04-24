@@ -6,6 +6,9 @@ exports.handler = async (event) => {
   const query = new URLSearchParams(event.queryStringParameters).toString();
   const scriptUrl = `${process.env.SCRIPT_URL}?${query}`;
 
+  console.log(scriptUrl);
+  
+
   try {
     const response = await fetch(scriptUrl);
     const result = await response.json();
