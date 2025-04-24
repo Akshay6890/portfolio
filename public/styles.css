@@ -671,6 +671,10 @@ h1, h2, h3, h4 {
     display: block;
 }
 
+#form-message{
+    color: #ff6b6b;
+}
+
 /* Footer */
 .footer {
     padding: 60px 40px 20px;

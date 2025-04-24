@@ -154,32 +154,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 var message = messageInput.value.trim();
 
 
-                /*fetch('https://script.google.com/macros/s/AKfycbzUvDGNcKS4DMIoJF82KsVUofi0nn8JNUZm5Sgkciv7wX3Rze3DX5ova4HuSwutz7nF/exec', {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                      name: name,
-                      email: email,
-                      message: message
-                    })
-                  })
-                  .then(res => res.json())
-                  .then(data => {
-                    alert('Thank you for your message! I will get back to you soon.');
-                    contactForm.reset();
-                  })
-                  .catch(err => {
-                    console.error("Error sending data:", err);
-                    alert("Failed to send message.");
-                  });*/
-
-
-                  fetch(`/.netlify/functions/send?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`)
-                    .then(res => res.json())
-                    .then(data => console.log("Success:", data))
-                    .catch(err => console.error("Error:", err));
+                fetch(`/.netlify/functions/send?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("form-message").innerText="";
+                    document.getElementById("form-message").innerText="Message sent!";
+                })
+                .catch(err => {
+                    document.getElementById("form-message").innerText="";
+                    document.getElementById("form-message").innerText="Message not sent!";
+                });
 
                   
             }
