@@ -15,23 +15,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Default Statcounter code for My Portfolio https://akshaypendyala.netlify.app/ -->
-		<script type="text/javascript">
-			var sc_project=13021567; 
-			var sc_invisible=1; 
-			var sc_security="6c7bf08e"; 
-		</script>
-		<script 
-			type="text/javascript"
-			src="https://www.statcounter.com/counter/counter.js"
-			async>
-		</script>
-		<noscript><div class="statcounter"><a title="Web Analytics"
-		href="https://statcounter.com/" target="_blank"><img
-		class="statcounter"
-		src="https://c.statcounter.com/13021567/0/6c7bf08e/1/"
-		alt="Web Analytics"
-		referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-	<!-- End of Statcounter Code -->
+    <script type="text/javascript">
+        var sc_project=13021567; 
+        var sc_invisible=1; 
+        var sc_security="6c7bf08e"; 
+    </script>
+    <script 
+        type="text/javascript"
+        src="https://www.statcounter.com/counter/counter.js"
+        async>
+    </script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/13021567/0/6c7bf08e/1/"
+    alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    <!-- End of Statcounter Code -->
 </head>
 <body>
     <div class="cursor"></div>
@@ -206,7 +206,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -344,12 +343,29 @@
                         <li><i class="fas fa-plane"></i> Planning my next adventure</li>
                     </ul>
                 </div>
-                <div class="about-links">
-                    <a href="mailto:pendyala.akshay1999@gmail.com" class="about-link">
-                        <span>Get in touch</span>
+                
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Message</label>
+                        <div class="form-error"></div>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <span>Send Message</span>
                         <div class="link-arrow">→</div>
-                    </a>
-                </div>
+                    </button>
+                </form>
             </div>
             <div class="about-image">
                 <div class="image-wrapper">
