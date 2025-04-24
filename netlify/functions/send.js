@@ -13,6 +13,8 @@ exports.handler = async (event) => {
     const response = await fetch(scriptUrl);
     const result = await response.json();
 
+    console.log(result);
+
     return {
       statusCode: 200,
       body: JSON.stringify({ status: "success", response: result }),
