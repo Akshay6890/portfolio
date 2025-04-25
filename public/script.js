@@ -146,8 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Here you would typically send the form data to a server
-                // For now, we'll just log it and show a success message
+                
 
                 var name = nameInput.value.trim();
                 var email = emailInput.value.trim();
@@ -158,11 +157,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(res => res.json())
                 .then(data => {
                     document.getElementById("form-message").innerText="";
-                    document.getElementById("form-message").innerText="Message sent!";
+                    document.getElementById("form-message").innerText=data.response;
                 })
                 .catch(err => {
                     document.getElementById("form-message").innerText="";
-                    document.getElementById("form-message").innerText="Message not sent!";
+                    document.getElementById("form-message").innerText=err.message;
                 });
 
                   
