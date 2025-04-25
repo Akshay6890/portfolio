@@ -48,6 +48,8 @@ const SCRIPT_URL = process.env.SCRIPT_URL;
 exports.handler = async (event) => {
   const origin = event.headers.origin;
 
+  console.log(origin);
+
   if (origin !== allowedOrigin) {
     return {
       statusCode: 403,
