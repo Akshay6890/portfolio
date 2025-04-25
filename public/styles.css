@@ -817,6 +817,27 @@ h1, h2, h3, h4 {
     .experience-date {
         width: auto;
     }
+
+    .skills-matrix {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .skill-category {
+        padding: 15px;
+    }
+    
+    .skill-items {
+        justify-content: center;
+    }
+    
+    .category-title {
+        justify-content: center;
+    }
+    
+    .skill-level h4 {
+        text-align: center;
+    }
     
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -884,6 +905,19 @@ h1, h2, h3, h4 {
     
     .footer-social a {
         font-size: 20px;
+    }
+
+    .skills-matrix {
+        padding: 0 15px;
+    }
+    
+    .skill-pill {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .category-title {
+        font-size: 1.3rem;
     }
     
     .skills-grid {
