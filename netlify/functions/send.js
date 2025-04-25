@@ -1,47 +1,3 @@
-/*exports.handler = async (event) => {
-  
-  if (event.httpMethod !== "GET") {
-    return { statusCode: 405, body: "Method Not Allowed" };
-  }
-
-  const allowedOrigin = "https://akshaypendyala.netlify.app";
-
-  const origin = event.headers.origin;
-
-  if (origin !== allowedOrigin) {
-    return {
-      statusCode: 403,
-      body: JSON.stringify({ status: "error", message: "Forbidden origin" })
-    };
-  }
-
-  const query = new URLSearchParams(event.queryStringParameters).toString();
-  const scriptUrl = `${process.env.SCRIPT_URL}?${query}`;
-
-  console.log(scriptUrl);
-  
-
-  try {
-    const response = await fetch(scriptUrl);
-    const result = await response.json();
-
-    console.log(result);
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ status: "success", response: result }),
-    };
-  } catch (err) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ status: "error", message: err.message }),
-    };
-  }
-};*/
-
-
-
-
 const allowedOrigin = "https://akshaypendyala.netlify.app";
 const SCRIPT_URL = process.env.SCRIPT_URL;
 
@@ -54,7 +10,7 @@ exports.handler = async (event) => {
   if (!isAllowedOrigin) {
     return {
       statusCode: 403,
-      body: JSON.stringify({ status: "error", message: "Forbidden origin" })
+      body: JSON.stringify({ status: "error", message: "Not Authorized" })
     };
 }
 
@@ -112,7 +68,7 @@ exports.handler = async (event) => {
 
   try {
     const response = await fetch(`${SCRIPT_URL}?${query}`);
-    const result = await response.json();
+    const result = await response.text();
 
     return {
       statusCode: 200,
