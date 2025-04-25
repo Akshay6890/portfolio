@@ -46,16 +46,18 @@ const allowedOrigin = "https://akshaypendyala.netlify.app";
 const SCRIPT_URL = process.env.SCRIPT_URL;
 
 exports.handler = async (event) => {
-  const origin = event.headers.origin;
+  const headers = event.headers;
+  const origin = headers.origin || headers.referer || "";
 
-  console.log(origin);
+  const isAllowedOrigin = origin.startsWith("https://akshaypendyala.netlify.app");
 
-  if (origin !== allowedOrigin) {
+  if (!isAllowedOrigin) {
     return {
       statusCode: 403,
-      body: JSON.stringify({ status: "error", message: "Not Authorized" })
+      body: JSON.stringify({ status: "error", message: "Forbidden origin" })
     };
-  }
+}
+
 
   if (event.httpMethod !== "GET") {
     return { statusCode: 405, body: "Invalid Request" };
@@ -114,7 +116,7 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ status: "success", response: "Message sent!" })
+      body: JSON.stringify({ status: "success", message: "Message sent!" })
     };
 
   } catch (err) {

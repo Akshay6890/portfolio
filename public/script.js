@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(res => res.json())
                 .then(data => {
                     document.getElementById("form-message").innerText="";
-                    document.getElementById("form-message").innerText=data.response;
+                    document.getElementById("form-message").innerText=data.message;
                 })
                 .catch(err => {
                     document.getElementById("form-message").innerText="";
