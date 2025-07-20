@@ -11,401 +11,372 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://akshaypendyala.netlify.app/">
     <title>Akshay Pendyala | Software Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png">
-    <!-- Default Statcounter code for My Portfolio https://akshaypendyala.netlify.app/ -->
-    <script type="text/javascript">
-        var sc_project=13021567; 
-        var sc_invisible=1; 
-        var sc_security="6c7bf08e"; 
-    </script>
-    <script 
-        type="text/javascript"
-        src="https://www.statcounter.com/counter/counter.js"
-        async>
-    </script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img
-    class="statcounter"
-    src="https://c.statcounter.com/13021567/0/6c7bf08e/1/"
-    alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-    <!-- End of Statcounter Code -->
+    <!--<link rel="icon" href="me.jpg" type="image/svg+xml">-->
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <div class="nav-left">
-            <a href="#" class="nav-logo">AP</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">akshay.dev</a>
+            <div class="nav-menu">
+                <a href="#experience">experience</a>
+                <a href="#work">work</a>
+                <a href="#skills">skills</a>
+                <a href="#hobbies">hobbies</a>
+                <a href="#contact">contact</a>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme" id="theme-toggle">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+                </svg>
+            </button>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nav-right">
-            <a href="#work" class="nav-link">Work</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#about" class="nav-link">About</a>
-        </div>
-        <button class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </nav>
 
     <!-- Hero Section -->
-    <main class="hero section-vh">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">Hi, I'm Akshay</span>
-                <span class="title-line-desc">Software Engineer and </span>
-                <span class="title-line-desc">Tech Enthusiast</span>
-            </h1>
-            <div class="hero-links">
-                <a href="#work" class="hero-link">
-                    <span>See my work</span>
-                    <div class="link-arrow">→</div>
-                </a>
-                <a href="akshay kumar pendyala.pdf" class="hero-link" download>
-                    <span>Download CV</span>
-                    <div class="link-arrow">↓</div>
-                </a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-text">Scroll</div>
-            <div class="scroll-line"></div>
-        </div>
-    </main>
-
-    <!-- Work Section -->
-    <section id="work" class="section-vh">
-        <div class="section-header">
-            <h2 class="section-title">Work</h2>
-            <div class="section-subtitle">Selected projects</div>
-        </div>
-
-        <div class="work-grid">
-            <div class="work-card">
-                <div class="work-card-content">
-                    <h3 class="work-card-title">LinkedIn Job Feedback Summarizer</h3>
-                    <p class="work-card-desc">NLP-powered job feedback analyzer that summarizes interview experiences</p>
-                    <div class="work-card-footer">
-                        <div class="work-card-tags">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>AWS EC2</span>
-                            <span>AWS S3</span>
-                        </div>
-                        <div class="work-card-links">
-                            <a href="https://github.com/Akshay6890/LinkedIn-Job-Summarizer" class="work-card-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-profile">
+                    <div class="profile-image">
+                        <img src="me.jpg" alt="Akshay Pendyala" loading="lazy">
                     </div>
                 </div>
-            </div>
-            
-            <div class="work-card">
-                <div class="work-card-content">
-                    <h3 class="work-card-title">Workday Credential Manager</h3>
-                    <p class="work-card-desc">Chrome extension that manages the workday portal credentials and autofills them</p>
-                    <div class="work-card-footer">
-                        <div class="work-card-tags">
-                            <span>Chrome Extension API</span>
-                            <span>JavaScript</span>
-                            <span>Broadcast API</span>
-                        </div>
-                        <div class="work-card-links">
-                            <a href="https://github.com/Akshay6890/Workday-Account-Manager" class="work-card-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <div class="work-card-content">
-                    <h3 class="work-card-title">Book recommender system</h3>
-                    <p class="work-card-desc">An AI Model that uses K-NN mathematical model to recommend books based on certain characteristics</p>
-                    <div class="work-card-footer">
-                        <div class="work-card-tags">
-                            <span>Python</span>
-                            <span>AI</span>
-                            <span>Sqlite3</span>
-                        </div>
-                        <div class="work-card-links">
-                            <a href="https://github.com/Akshay6890/Book-Recommendation-Analysis" class="work-card-link" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Akshay Pendyala</span>
+                    </h1>
+                    <!--<p class="hero-subtitle">Software Engineer & System Architect</p>-->
+                    <p class="hero-description">
+                        I'm a software engineer passionate about building scalable and resilient architectures. 
+                        My journey in tech started with curiosity about how complex systems handle massive scale.
+                        When I'm not architecting systems, you'll find me exploring new technologies, 
+                        reading about space exploration, or planning my next adventure.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#work" class="btn btn-primary">View Projects</a>
+                        <a href="Akshay Kumar Pendyala.pdf" class="btn btn-outline" download>Resume</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+
     <!-- Experience Section -->
-    <section id="experience" class="section-vh bg-light">
-        <div class="section-header">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-subtitle">Professional journey</div>
+    <section id="experience" class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>EXPERIENCE</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <span class="company">Infosys</span>
+                            <span class="duration">2021 - 2023</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed 20+ RESTful APIs serving real-time financial data, handling 100K+ daily requests with JWT security and role-based access control</li>
+                            <li>Migrated financial dashboard from IBM Alphablox to modern Ext.js/JSP/MySQL stack, reducing manual efforts by 90% and cutting $125K annual operating costs</li>
+                            <li>Built enterprise ETL pipeline processing 1M+ daily rows from TeradataDB, eliminating 100% of manual data aggregation using Shell and Python</li>
+                            <li>Automated CI/CD pipelines with Jenkins/Git/Shell, reducing deployment time by 80% and regression issues by 50% through automated testing</li>
+                            <li>Optimized SQL queries achieving 40% performance improvement and enhanced application scalability</li>
+                            <li>Enhanced security by mitigating 1000+ vulnerabilities (SQL Injection, XSS, CSRF) following OWASP standards per Checkmarx scans</li>
+                            <li>Mentored 6 team members on internal applications and best practices, accelerating their professional development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <span class="company">Scytale Alpha Pvt. Ltd.</span>
+                            <span class="duration">2020 - 2021</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Revamped the company website using Bootstrap, which increased page views by 60% and reinforced brand recognition</li>
+                            <li>Automated data collection by integrating a form submission system with the Google Spreadsheets API, improving operational efficiency by 80%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="company">Crio.Do</span>
+                            <span class="duration">2020</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Built a image recognition functionality for food tagging in mobile app</li>
+                            <li>Developed a pipeline which posts image data to Slack Channel, Pinterest Story Board and Facebook Timeline</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Web Development Intern</h3>
+                            <span class="company">Infochord Technologies Pvt. Ltd.</span>
+                            <span class="duration">2019</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed dynamic Learning Management System using PHP, MySQL, and JavaScript</li>
+                            <li>Led daily mini-projects resulting in robust, feature-rich applications</li>
+                            <li>Demonstrated consistent growth and adaptability throughout internship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="experience-container">
-            <div class="experience-item">
-                <div class="experience-date">2021 - 2023</div>
-                <div class="experience-content">
-                    <h3>Software Engineer</h3>
-                    <h4>Infosys</h4>
-                    <ul>
-                        <li>Led migration of reporting tool from IBM Alphabox to native JS</li>
-                        <li>Developed financial reports handling $1B+ in assets</li>
-                        <li>Implemented security fixes for SQLi, XSS vulnerabilities</li>
-                    </ul>
-                </div>
+    <!-- Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>PROJECTS</h2>
+                <p class="section-subtitle">Products that I loved building</p>
             </div>
-            
-            <div class="experience-item">
-                <div class="experience-date">2020 - 2021</div>
-                <div class="experience-content">
-                    <h3>Software Engineer</h3>
-                    <h4>Scytale Alpha Pvt. Ltd.</h4>
-                    <ul>
-                        <li>Improved UX/UI for better engagement</li>
-                        <li>Enhanced website responsiveness with Bootstrap</li>
-                        <li>Automated data collection with Google Sheets API</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="work-grid">
+                <article class="work-card">
+                    <div class="work-header">
+                        <h3>LinkedIn Job Feedback Summarizer</h3>
+                        <div class="work-links">
+                            <a href="https://github.com/Akshay6890/LinkedIn-Job-Summarizer" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Built a system that processes thousands of job posting feedbacks, extracting key insights and patterns to help job seekers optimize their interview strategies. Implemented along with BART model achieving 85% accuracy in sentiment classification.</p>
+                    <div class="work-tech">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>AWS EC2</span>
+                        <span>AWS S3</span>
+                    </div>
+                </article>
 
-            <div class="experience-item">
-                <div class="experience-date">2020 - 2020</div>
-                <div class="experience-content">
-                    <h3>Software Engineer Intern</h3>
-                    <h4>Crio.Do</h4>
-                    <ul>
-                        <li>Added functionality for a mobile app to generate tags related to the image of a food</li>
-                        <li>Posts the image to a pinterest storyboard and tags to facebook timeline</li>
-                    </ul>
-                </div>
-            </div>
+                <article class="work-card">
+                    <div class="work-header">
+                        <h3>Workday Credential Manager</h3>
+                        <div class="work-links">
+                            <a href="https://github.com/Akshay6890/Workday-Account-Manager" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Developed a secure Chrome extension that streamlines Workday portal authentication. Implemented end-to-end encryption for credential storage and real-time synchronization across devices, reducing login time by 70% while maintaining enterprise-grade security standards.</p>
+                    <div class="work-tech">
+                        <span>Chrome Extension API</span>
+                        <span>JavaScript</span>
+                        <span>Broadcast API</span>
+                    </div>
+                </article>
 
-            <div class="experience-item">
-                <div class="experience-date">2019 - 2019</div>
-                <div class="experience-content">
-                    <h3>Web Development Intern</h3>
-                    <h4>Infochord Technologies Pvt. Ltd.</h4>
-                    <ul>
-                        <li>Developed a dynamic Learning Management System leveraging PHP, MySQL, and JavaScript to enhance user experience and streamline functionality</li>
-                        <li>Spearheaded daily mini-projects, culminating in a robust, feature-rich application that showcased advanced technical skills and problem-solving abilities</li>
-                        <li>Demonstrated consistent growth, adaptability, and a commitment to excellence throughout the internship journey</li>
-                    </ul>
-                </div>
+                <article class="work-card">
+                    <div class="work-header">
+                        <h3>Book.ly</h3>
+                        <div class="work-links">
+                            <a href="https://github.com/Akshay6890/Book-Recommendation-Analysis" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Engineered a sophisticated recommendation system using K-NN algorithms and collaborative filtering to deliver personalized book suggestions. Processed 50,000+ book ratings and achieved 92% user satisfaction rate. Implemented real-time recommendation updates and scalable data processing pipelines.</p>
+                    <div class="work-tech">
+                        <span>Python</span>
+                        <span>AI/ML</span>
+                        <span>SQLite</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section-vh">
-        <div class="section-header">
-            <h2 class="section-title">Skills</h2>
-            <div class="section-subtitle">Technologies I work with</div>
-        </div>
-
-        <div class="skills-matrix">
-            <!-- Frontend Skills -->
-            <div class="skill-category">
-                <h3 class="category-title">
-                    <i class="fas fa-laptop-code"></i> Frontend
-                </h3>
-                <div class="skill-level">
-                    <h4>Advanced</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-js"></i> JavaScript
-                        </div>
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-html5"></i> HTML5
-                        </div>
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-css3-alt"></i> CSS3
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-level">
-                    <h4>Intermediate</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill intermediate">
-                            <i class="fab fa-react"></i> React
-                        </div>
-                    </div>
-                </div>
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>SKILLS</h2>
+                <p class="section-subtitle">Full-stack development, cloud architecture, and security expertise</p>
             </div>
-
-            <!-- Backend Skills -->
-            <div class="skill-category">
-                <h3 class="category-title">
-                    <i class="fas fa-server"></i> Backend
-                </h3>
-                <div class="skill-level">
-                    <h4>Advanced</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-java"></i> Java
-                        </div>
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-python"></i> Python
-                        </div>
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="images/skills/javascript.svg" alt="JavaScript" loading="lazy">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/python.svg" alt="Python" loading="lazy">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/java.svg" alt="Java" loading="lazy">
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/react.svg" alt="React" loading="lazy">
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/nodejs.svg" alt="Node.js" loading="lazy">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/html5.svg" alt="HTML5" loading="lazy">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/css3.svg" alt="CSS3" loading="lazy">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/aws.svg" alt="AWS" loading="lazy">
+                        <span>AWS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/docker.svg" alt="Docker" loading="lazy">
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/jenkins.svg" alt="Jenkins" loading="lazy">
+                        <span>Jenkins</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/mongodb.svg" alt="MongoDB" loading="lazy">
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/mysql.svg" alt="MySQL" loading="lazy">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/spring-boot.svg" alt="Spring Boot" loading="lazy">
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/flask.svg" alt="Flask" loading="lazy">
+                        <span>Flask</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/php.svg" alt="PHP" loading="lazy">
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/linux.svg" alt="Linux" loading="lazy">
+                        <span>Linux</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/gcp.svg" alt="Google Cloud Platform" loading="lazy">
+                        <span>GCP</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/postman.svg" alt="Postman" loading="lazy">
+                        <span>Postman</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/oracle.svg" alt="Oracle" loading="lazy">
+                        <span>OracleDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/redis.svg" alt="Redis" loading="lazy">
+                        <span>Redis</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/skills/checkmarx.svg" alt="Checkmarx" loading="lazy">
+                        <span>Checkmarx</span>
                     </div>
                 </div>
-                <div class="skill-level">
-                    <h4>Intermediate</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill intermediate">
-                            <i class="fab fa-node"></i> Node.js
-                        </div>
-                        <div class="skill-pill intermediate">
-                            <i class="fas fa-database"></i> MongoDB
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DevOps Skills -->
-            <div class="skill-category">
-                <h3 class="category-title">
-                    <i class="fas fa-cloud"></i> DevOps
-                </h3>
-                <div class="skill-level">
-                    <h4>Advanced</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-jenkins"></i> Jenkins
-                        </div>
-                        <div class="skill-pill advanced">
-                            <i class="fab fa-aws"></i> AWS
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-level">
-                    <h4>Intermediate</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill intermediate">
-                            <i class="fab fa-docker"></i> Docker
-                        </div>
-                        <div class="skill-pill intermediate">
-                            <i class="fab fa-linux"></i> Linux
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-level">
-                    <h4>Beginner</h4>
-                    <div class="skill-items">
-                        <div class="skill-pill beginner">
-                            <i class="fab fa-google"></i> GCP
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="skill-legend">
-            <div class="legend-item">
-                <span class="legend-dot advanced"></span>
-                <span>Advanced</span>
-            </div>
-            <div class="legend-item">
-                <span class="legend-dot intermediate"></span>
-                <span>Intermediate</span>
-            </div>
-            <div class="legend-item">
-                <span class="legend-dot beginner"></span>
-                <span>Beginner</span>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-vh bg-light">
-        <div class="about-container">
-            <div class="about-content">
-                <h2 class="about-title">About Me</h2>
-                <div class="about-text">
-                    <p>I'm a software engineer passionate about building scalable and resilient architectures. My journey in tech began with a curiosity about how complex systems handle massive scale.</p>
-                    <p>When I'm not architecting systems, you'll find me:</p>
-                    <ul class="about-list">
-                        <li><i class="fas fa-code"></i> Exploring new technologies</li>
-                        <li><i class="fas fa-earth"></i> Watching documentaries and reading about space</li>
-                        <li><i class="fas fa-plane"></i> Planning my next adventure</li>
-                    </ul>
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>HOBBIES & INTERESTS</h2>
+                <p class="section-subtitle">Beyond the code, here's what keeps me inspired</p>
+            </div>
+            <div class="hobbies-container">
+                <div class="hobby-item">
+                    <span class="hobby-emoji">🚀</span>
+                    <div class="hobby-content">
+                        <h3>Space Exploration</h3>
+                        <p>Following SpaceX launches, studying exoplanets, and dreaming of Mars colonization. Currently learning more about black holes!</p>
+                    </div>
                 </div>
                 
-                <!-- Contact Form -->
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Name</label>
-                        <div class="form-error"></div>
+                <div class="hobby-item">
+                    <span class="hobby-emoji">🌍</span>
+                    <div class="hobby-content">
+                        <h3>Travel & Adventure</h3>
+                        <p>Exploring beaches, mountains, and cities. Next destination on wishlist: Hoover Dam</p>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Email</label>
-                        <div class="form-error"></div>
+                </div>
+                
+                <div class="hobby-item">
+                    <span class="hobby-emoji">📸</span>
+                    <div class="hobby-content">
+                        <h3>Photography</h3>
+                        <p>Street photography enthusiast capturing urban stories. Specializing in long-exposure night shots and finding beauty in chaos.</p>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                        <label for="message">Message</label>
-                        <div class="form-error"></div>
+                </div>
+                
+                <div class="hobby-item">
+                    <span class="hobby-emoji">💻</span>
+                    <div class="hobby-content">
+                        <h3>Open Source</h3>
+                        <p>Contributing to projects like Linkedin cringe gaurd, Dice. Building tools that help developers be more productive.</p>
                     </div>
-                    <button type="submit" class="form-submit">
-                        <span>Send Message</span>
-                        <div class="link-arrow">→</div>
-                    </button>
-                    <p class="form-group" id="form-message"></p>
-                </form>
-            </div>
-            <div class="about-image">
-                <div class="image-wrapper">
-                    <img src="me.jpg" alt="Akshay Pendyala" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-main">
-                <div class="footer-logo">AP</div>
-                <p class="footer-quote">"Simplicity is the ultimate sophistication"</p>
-                <div class="footer-social">
-                    <a href="https://github.com/Akshay6890" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/akshay-kumar-pendyala-61221a180/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://x.com/pendyala_akshay" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="mailto:pendyala.akshay1999@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Let's Connect</h2>
+                <p>I am always open to new opportunities and interesting conversations.</p>
+                <a href="mailto:pendyala.akshay1999@gmail.com" class="contact-email">pendyala.akshay1999@gmail.com</a>
+                <div class="contact-links">
+                    <a href="https://github.com/Akshay6890" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/akshay-kumar-pendyala-61221a180/" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-location">
-                    <i class="fas fa-map-marker-alt"></i> Hayward, CA
-                </div>
-                <div class="footer-copyright">© <span id="year"></span> Akshay Pendyala. All rights reserved.</div>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script src="script.js"></script>
 </body>

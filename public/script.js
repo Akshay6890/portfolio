@@ -1,62 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set dark theme by default
-    document.body.setAttribute('data-theme', 'dark');
-
-    // Custom Cursor
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
     
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        
-        setTimeout(() => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-        }, 100);
-    });
+    // Check for saved theme preference or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
     
-    document.querySelectorAll('a, button').forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'scale(2)';
-            cursorFollower.style.transform = 'scale(0.5)';
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         });
-        
-        element.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'scale(1)';
-            cursorFollower.style.transform = 'scale(1)';
-        });
-    });
-
+    }
+    
     // Mobile Menu Toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navRight = document.querySelector('.nav-right');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
     
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('active');
-        navRight.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            navRight.classList.remove('active');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
-    });
 
-    // Sticky Navigation
-    const nav = document.querySelector('.main-nav');
-    const hero = document.querySelector('.hero');
-    const heroHeight = hero.offsetHeight;
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > heroHeight * 0.8) {
-            nav.classList.add('nav-scrolled');
-        } else {
-            nav.classList.remove('nav-scrolled');
-        }
-    });
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -68,8 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80;
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: offsetTop,
                     behavior: 'smooth'
                 });
             }
@@ -77,114 +56,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Animation on scroll (excluding about section)
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.work-card, .experience-item, .skill-icon');
-        
-        elements.forEach((element, index) => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.2;
-            
-            if (elementPosition < screenPosition) {
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, index * 100);
-            }
-        });
-    };
-    
-    // Initialize elements as hidden (excluding about section)
-    document.querySelectorAll('.work-card, .experience-item, .skill-icon').forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Run once on load
-
-    // Contact Form Validation and Submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Clear previous errors
-            document.querySelectorAll('.form-group').forEach(group => {
-                group.classList.remove('error');
-                const errorElement = group.querySelector('.form-error');
-                if (errorElement) errorElement.style.display = 'none';
-            });
-            
-            let isValid = true;
-            
-            // Validate name
-            const nameInput = document.getElementById('name');
-            if (!nameInput.value.trim()) {
-                isValid = false;
-                showError(nameInput, 'Name is required');
-            }
-            
-            // Validate email
-            const emailInput = document.getElementById('email');
-            if (!emailInput.value.trim()) {
-                isValid = false;
-                showError(emailInput, 'Email is required');
-            } else if (!isValidEmail(emailInput.value.trim())) {
-                isValid = false;
-                showError(emailInput, 'Please enter a valid email');
-            }
-            
-            // Validate message
-            const messageInput = document.getElementById('message');
-            if (!messageInput.value.trim()) {
-                isValid = false;
-                showError(messageInput, 'Message is required');
-            }
-            
-            if (isValid) {
-                
-
-                var name = nameInput.value.trim();
-                var email = emailInput.value.trim();
-                var message = messageInput.value.trim();
-
-
-                fetch(`/.netlify/functions/send?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById("form-message").innerText="";
-                    document.getElementById("form-message").innerText=data.message;
-                })
-                .catch(err => {
-                    document.getElementById("form-message").innerText="";
-                    document.getElementById("form-message").innerText=err.message;
-                });
-
-                  
-            }
-        });
-        
-        function showError(input, message) {
-            const formGroup = input.closest('.form-group');
-            formGroup.classList.add('error');
-            
-            let errorElement = formGroup.querySelector('.form-error');
-            if (!errorElement) {
-                errorElement = document.createElement('div');
-                errorElement.className = 'form-error';
-                formGroup.appendChild(errorElement);
-            }
-            
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-        }
-        
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
+
+
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('fade-in-up');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animations
+    const animateElements = document.querySelectorAll('.work-card, .timeline-item, .skill-item, .contact-info');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+
+
+    // Add hover effects for skill items
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateY(-8px) scale(1.05)';
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Add glow effect to accent elements on scroll
+    const accentElements = document.querySelectorAll('.nav-brand, .timeline-marker');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        accentElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                el.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.3)';
+            } else {
+                el.style.boxShadow = 'none';
+            }
+        });
+    });
 });
